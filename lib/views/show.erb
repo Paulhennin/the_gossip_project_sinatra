@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title> The Gossip Project </title>
+  </head>
+  <body>
+    <h1>PAGE POTIN </h1>
+    <br/>
+
+    <% gossips %>
+      <p> Vous avez demandé la page pour voir le potin n°<%= params['id'] %> </p>
+      <p> Son auteur : <%= gossips.author %> </p>
+      <p> Le contenu du potin : <%= gossips.content %>
+        <br/>
+        <p>
+          <form action='/gossips/:id/' method='POST'>
+            Si vous souhaitez commenter c'est ici : <input type='text' name='comment'/>
+            <input type='submit'/>
+    <a href="<%= params['id'] %>/edit/" class="button">Editer le potin</a><br /><br/><br/><br/>
+     <a href="http://localhost:4567">Lien pour revenir à la page des potins.</a>
+    </p>
+  </body>
+</html>
